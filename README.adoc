@@ -1,4 +1,4 @@
-= gradle 模板项目
+= 树结构
 xiayx <xiayouxue@hotmail.com>
 v1.0, 2019-08-23: SNAPSHOT
 :doctype: docbook
@@ -10,4 +10,4 @@ v1.0, 2019-08-23: SNAPSHOT
 :testsourcedir: src/test/java
 :source-highlighter: highlightjs
 
-查看 http://peacetrue.github.io/public/peacetrue-template-gradle/index.html[详情^]
+查看 http://peacetrue.github.io/public/peacetrue-tree/index.html[详情^]
