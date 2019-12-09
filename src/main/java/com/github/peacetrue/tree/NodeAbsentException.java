@@ -1,7 +1,5 @@
 package com.github.peacetrue.tree;
 
-import lombok.Getter;
-
 import java.util.Objects;
 
 /**
@@ -9,7 +7,6 @@ import java.util.Objects;
  *
  * @author xiayx
  */
-@Getter
 public class NodeAbsentException extends RuntimeException {
 
     private Object node;
@@ -19,4 +16,8 @@ public class NodeAbsentException extends RuntimeException {
         this.node = Objects.requireNonNull(node);
     }
 
+    @SuppressWarnings("unchecked")
+    public <T> T getNode() {
+        return (T) node;
+    }
 }

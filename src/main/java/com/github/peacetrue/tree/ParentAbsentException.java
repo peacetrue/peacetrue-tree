@@ -1,7 +1,5 @@
 package com.github.peacetrue.tree;
 
-import lombok.Getter;
-
 import java.util.Objects;
 
 /**
@@ -9,7 +7,6 @@ import java.util.Objects;
  *
  * @author xiayx
  */
-@Getter
 public class ParentAbsentException extends RuntimeException {
 
     private Object node;
@@ -17,6 +14,11 @@ public class ParentAbsentException extends RuntimeException {
     public ParentAbsentException(Object node) {
         super(String.format("节点[%s]的父节点不存在于树中", node));
         this.node = Objects.requireNonNull(node);
+    }
+
+    @SuppressWarnings("unchecked")
+    public <T> T getNode() {
+        return (T) node;
     }
 
 }
