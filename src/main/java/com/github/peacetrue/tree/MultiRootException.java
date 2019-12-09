@@ -20,7 +20,8 @@ public class MultiRootException extends RuntimeException {
         this.roots = Objects.requireNonNull(roots);
     }
 
-    public Collection getRoots() {
-        return roots;
+    @SuppressWarnings("unchecked")
+    public <T> Collection<T> getRoots() {
+        return (Collection<T>) roots;
     }
 }
